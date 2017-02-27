@@ -1,0 +1,26 @@
+{
+  "name": "moodle-webservices-lib",
+  "version": "0.0.1",
+  "description": "A library to manage moodle webservice names and parameters. Use with any moodle client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankapunkt/moodle-js-webservices-lib.git"
+  },
+  "keywords": [
+    "moodle",
+    "lms",
+    "webservices",
+    "http",
+    "lib"
+  ],
+  "author": "jkuester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jankapunkt/moodle-js-webservices-lib/issues"
+  },
+  "homepage": "https://github.com/jankapunkt/moodle-js-webservices-lib#readme"
+}
