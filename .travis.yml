@@ -1,0 +1,26 @@
+sudo: required
+language: node_js
+node_js:
+  - "0.12"
+
+# safelist
+branches:
+  only:
+  - master
+  - develop
+
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+before_script:
+  - npm install --save
+
+script:
+  - npm test
+
