@@ -3,11 +3,21 @@
 A collection of all the names and parameters of the moodle webservices. 
 This package is at a very early stage but updated regularly.
 
+## Install
+
+```javascript
+import {MoodleWebservicesLib} from 'moodle-webservices-lib';
+
+// get the service lib for th default version (3.2)
+const mws = MoodleWebservicesLib.getLib();
+
+```
 
 
-## Pull Request and Testing
 
-Join and help to improve. To run the tests, you need to setup the moodle sandbox.
+## Testing
+
+To run the tests, you need to setup the moodle sandbox.
 It is located at https://demo.moodle.net and is a service provided by the moodle platform to test the framework.
 
 1. Go to https://demo.moodle.net
@@ -21,4 +31,10 @@ It is located at https://demo.moodle.net and is a service provided by the moodle
 9. Save changes
 10. run tests
 
-Please create a branch for each service to test and merge your results into the "develop" branch.
+## Pull Requests
+
+Contribution is always welcome! Please create a branch for each service version (such as 3.2) to test and merge your results into the "develop" branch.
+
+## Licence
+
+Jan Küster 2017 MIT Licence
