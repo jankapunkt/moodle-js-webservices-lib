@@ -8,17 +8,55 @@ This package is at a very early stage but updated regularly.
 ```javascript
 import {MoodleWebservicesLib} from 'moodle-webservices-lib';
 
-// get the service lib for th default version (3.2)
-const mws = MoodleWebservicesLib.getLib();
+// get the service lib for the default version (currently: 3.2)
+const services = mws.getService();
+
+//... prepare your moodle client for a webservice call
+
+// creates the base url for the ws call
+const url = "https://path.tomoodle.com/" + services.URL_TOKEN + "?"; 
+const args = services.AUTH_GET_TOKEN.args("yourusername", "yourpassword");
+
+//... include url and args into your ws query 
 
 ```
 
+## Changelog
+
+0.0.5
+
+* core_course_get_courses
+* core_enrol_get_enrolled_users
+* core_webservice_get_site_info
 
 
-## Testing
+0.0.2 - get auth token
 
-To run the tests, you need to setup the moodle sandbox.
-It is located at https://demo.moodle.net and is a service provided by the moodle platform to test the framework.
+* Auth token can be retrieved from the moodle website
+
+0.0.1 - initial collection
+
+* getService() function to retrieve service libs by moodle version
+* intitial testing system
+
+
+## Contribution / Pull Requests
+
+##### Guidelines
+
+Contribution is always welcome! Please create a branch for each service (pattern: 3.2_service_name). 
+After implementation,  test and merge your results into the main service version (such as "3.2").
+
+The develop branch should only receive merges from version branches, because it is the main anchor point between versions.
+Untested PRs will be rejected. Incomplete tests are only accepted on optional parameters. The main service tests should run as expected.
+
+Please also update this README changelog, if you added significant changes
+
+##### Testing
+
+
+To run the tests, you need to login to the moodle sandbox and enable webservices.
+This sandbox is a service provided by the moodle platform to test the framework.
 
 1. Go to https://demo.moodle.net
 2. Login as user: admin with password: sandbox
@@ -31,9 +69,16 @@ It is located at https://demo.moodle.net and is a service provided by the moodle
 9. Save changes
 10. run tests
 
-## Pull Requests
 
-Contribution is always welcome! Please create a branch for each service version (such as 3.2) to test and merge your results into the "develop" branch.
+##### Versioning
+
+This package uses semantic versioning (http://semver.org) where the numbers are mapped as following:
+
+major.minor.patch
+
+major will be counted only for full releases, e.g. when a moodle version is completely covered.
+minor will be counted when a webservice category is covered (e.g. core_user, core_competency, mod_forum etc.)
+patch will be counted when a single service is covered or bugs/errors are fixed
 
 ## Licence
 
