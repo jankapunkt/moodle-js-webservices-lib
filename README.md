@@ -64,20 +64,20 @@ Please also update this README changelog, if you added significant changes
 
 ##### Testing
 
+1. Fork and clone the repo
+2. cd into the dir and install the dev dependencies
+3. To run the tests, you need to login to the moodle sandbox and enable webservices. This sandbox is a service provided by the moodle platform to test the framework.
 
-To run the tests, you need to login to the moodle sandbox and enable webservices.
-This sandbox is a service provided by the moodle platform to test the framework.
-
-1. Go to https://demo.moodle.net
-2. Login as user: admin with password: sandbox
-3. Go to Site administration
-4. Got to Mobile App -> Mobile App Settings
-5. Activate the checkbox 'Enable web services for mobile devices' and save changes
-6. Goto Site Administration -> Development -> Debugging
-7. Set Debug Messages to 'Developer'
-8. Set 'Display debug messages' to yes
-9. Save changes
-10. run tests
+3.1. Go to https://demo.moodle.net
+3.2. Login as user: admin with password: sandbox
+3.3. Go to Site administration
+3.4. Got to Mobile App -> Mobile App Settings
+3.5. Activate the checkbox 'Enable web services for mobile devices' and save changes
+3.6. Goto Site Administration -> Development -> Debugging
+3.7. Set Debug Messages to 'Developer'
+3.8. Set 'Display debug messages' to yes
+3.9. Save changes
+3.10. run tests
 
 
 ##### Versioning
