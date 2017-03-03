@@ -4,8 +4,8 @@
   "description": "A library to manage moodle webservice names and parameters. Use with any moodle client.",
   "main": "./dist/main.js",
   "scripts": {
-	"build": "node build.js",
-    "prepublish": "npm test && npm run build",
+    "build": "node build.js",
+    "prepublish": "npm run build",
     "test": "mocha --timeout 15000 --compilers js:babel-core/register --recursive \"lib/**/*.tests.js\"",
     "test:watch": "npm test -- --watch"
   },
@@ -36,8 +36,5 @@
     "babel-preset-stage-0": "^6.5.0",
     "expect": "^1.20.2",
     "mocha": "^2.5.3"
-  },
-  "dependencies": {
-    "expect": "^1.20.2"
   }
 }
