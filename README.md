@@ -1,7 +1,16 @@
 # MOODLE WEBSERVICE LIB
 
-A collection of all the names and parameters of the moodle webservices. 
-This package is at a very early stage but updated regularly.
+This is **NOT** yet another moodle client implementation.
+This is rather a collection of all the names and parameters of the moodle webservices.
+
+##### Background
+
+Moodle offers about 380 webservice functions (state: version 3.2). 
+The knowledge about these functions and their required and optional parameters should be available independently from a certain moodle client implementation.
+Therefore this collection is designed to be client agnostic.
+
+
+**Note:** This package is at a very early stage but updated regularly. Contribution is very welcome!
 
 ## Install
 
@@ -9,12 +18,13 @@ This package is at a very early stage but updated regularly.
 import {MoodleWebservicesLib} from 'moodle-webservices-lib';
 
 // get the service lib for the default version (currently: 3.2)
+// or pass a version number, if you want another version (if supported)
 const services = mws.getService();
 
-//... prepare your moodle client for a webservice call
+//... prepare your moodle client for a webservice calls
 
-// creates the base url for the ws call
-const url = "https://path.tomoodle.com/" + services.URL_TOKEN + "?"; 
+// create the base url for the ws call
+const url = "https://demo.moodle.com/" + services.URL_TOKEN + "?";
 const args = services.AUTH_GET_TOKEN.args("yourusername", "yourpassword");
 
 //... include url and args into your ws query 
