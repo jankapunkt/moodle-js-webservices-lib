@@ -33,6 +33,11 @@ const args = services.AUTH_GET_TOKEN.args("yourusername", "yourpassword");
 
 ## Changelog
 
+0.0.6
+
+* tool_mobile_get_config
+* core_course_get_categories
+
 0.0.5
 
 * core_course_get_courses
